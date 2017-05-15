@@ -14,20 +14,22 @@ const handleSubmit = (ev) => {
         <div style="height: 50px; width: 50px; background-color: ${hairColor}"></div>
     `
 
-    // details.innerHTML = `<em>${personName}</em>`
+    const em = document.createElement('ul')
+    em.textContent = 'Submission'
+    const name = document.createElement('li')
+    name.textContent = personName
+    const color = document.createElement('li')
+    color.textContent = hairColor
+    const num = document.createElement('li')
+    num.textContent = age
+    const place = document.createElement('li')
+    place.textContent = birthplace
+    em.appendChild(name)
+    em.appendChild(color)
+    em.appendChild(num)
+    em.appendChild(place)
+    details.appendChild(em)
 
-    // const em = document.createElement('em')
-    // em.textContent = personName
-    // details.appendChild(em)
-
-    details.innerHTML = `
-        <ul>
-            <li>Name: ${personName}</li>
-            <li>Hair Color: ${colorDiv}</li>
-            <li>Age: ${age}</li>
-            <li>Birthplace: ${birthplace}</li>
-        </ul>
-    `
 }
 
 personForm.addEventListener('submit', handleSubmit)
