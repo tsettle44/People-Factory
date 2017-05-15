@@ -20,9 +20,16 @@ const handleSubmit = (ev) => {
     const labels = document.getElementsByTagName('label')
 
     for(var i = 0; i < form.length - 1 ; i++) {
-        const list = document.createElement('li')
-        list.textContent = labels[i].innerText + ": " + form[i].value
-        ul.appendChild(list)        
+        if(i == 1) {
+            const colorDiv = `<div style="height: 50px; width: 50px; background-color: ${form[i].value}"></div>`
+            const list = document.createElement('li')
+            list.innerHTML = labels[i].innerText + ": " + colorDiv
+            ul.appendChild(list)
+        } else {
+            const list = document.createElement('li')
+            list.textContent = labels[i].innerText + ": " + form[i].value
+            ul.appendChild(list)      
+        }
     }
 
     
