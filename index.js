@@ -1,16 +1,14 @@
 const personForm = document.querySelector('form')
-
-personForm.onsubmit = 
-
-const handSubmit = (ev) => {
+ 
+const handleSubmit = (ev) => {
     ev.preventDefault()
     const form = ev.target
-    const details = document.querySelector(`.details`)
+    const details = document.querySelector('.details')
 
     const personName = form.personName.value
-    const hairColor = form.personName.value
-    const age = form.personName.value
-    const birthplace = form.personName.value
+    const hairColor = form.hairColor.value
+    const age = form.age.value
+    const birthplace = form.birthplace.value
 
     const colorDiv = `
         <div style="height: 50px; width: 50px; background-color: ${hairColor}"></div>
@@ -25,11 +23,11 @@ const handSubmit = (ev) => {
     details.innerHTML = `
         <ul>
             <li>Name: ${personName}</li>
-            <li>Hair Color: ${hairColor}</li>
+            <li>Hair Color: ${colorDiv}</li>
             <li>Age: ${age}</li>
             <li>Birthplace: ${birthplace}</li>
         </ul>
     `
 }
 
-person.addEventListener('submit', handleSubmit)
+personForm.addEventListener('submit', handleSubmit)
