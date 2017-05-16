@@ -21,7 +21,7 @@ const handleSubmit = (ev) => {
 
     for(var i = 0; i < form.length - 1 ; i++) {
         if(i == 1) {
-            const colorDiv = `<div style="height: 20px; width: 150px; background-color: ${form[i].value}"></div>`
+            const colorDiv = `<div style="height: 20px; display: inline-block; width: 150px; background-color: ${form[i].value}"></div>`
             const list = document.createElement('li')
             list.innerHTML = labels[i].innerText + ": " + colorDiv
             ul.appendChild(list)
