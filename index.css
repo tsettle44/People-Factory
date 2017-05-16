@@ -29,6 +29,11 @@ dl:nth-of-type(even) {
   background-color: WhiteSmoke;
 }
 
+.details {
+  border: 2px solid grey;
+  border-radius: 5px
+}
+
 @media (min-width: 700px) {
   section > div {
     width: 60%;
